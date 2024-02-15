@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "email": "satyabolashubham@gmail.com",
+      "password": "123456@a",
+      "id": "1"
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "category": "salary",
+      "amount": "10000",
+      "date": "2024-02-15",
+      "add": "true"
+    },
+    {
+      "id": 2,
+      "category": "food",
+      "amount": "500",
+      "date": "2024-02-15",
+      "add": "false"
+    }
+  ]
+}

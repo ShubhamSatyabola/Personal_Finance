@@ -20,16 +20,6 @@ export const checkUserAsync = createAsyncThunk(
 
 
 
-export const logoutUserAsync = createAsyncThunk(
-  "user/logoutUser",
-  async (userId) => {
-    const response = await logoutUser(userId);
-    // The value we return becomes the `fulfilled` action payload
-    return response.data;
-  }
-);
-
-
 export const authReducer = createSlice({
   name: 'user',
   initialState,
@@ -56,13 +46,6 @@ export const authReducer = createSlice({
         state.status = "idle";
         state.error = action.payload;
       })
-      .addCase(logoutUserAsync.pending, (state) => {
-        state.status = "loading";
-      })
-      .addCase(logoutUserAsync.fulfilled, (state, action) => {
-        state.status = "idle";
-        state.loggedInUser = null;
-      });
      
   },
 });
